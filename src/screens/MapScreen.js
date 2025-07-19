@@ -4,8 +4,8 @@ import MapboxGL from '@react-native-mapbox-gl/maps';
 import * as Location from 'expo-location';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-// Your Mapbox token
-MapboxGL.setAccessToken('pk.eyJ1IjoidGVkZHlvYnJpZW4iLCJhIjoiY21kOXJhb3BmMGE3ZDJ4cHphdzE5ZjRlOCJ9.CvcrhBHWUp0aYglUXYivng');
+// Use environment variable for Mapbox token
+MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN);
 
 const MapScreen = () => {
   const [location, setLocation] = useState(null);
